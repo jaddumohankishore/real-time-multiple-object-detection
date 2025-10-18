@@ -1,0 +1,6 @@
+opencv-python
+imutils
+pyttsx3
+ultralytics
+numpy
+tk
