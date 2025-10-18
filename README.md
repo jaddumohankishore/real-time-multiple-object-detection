@@ -40,4 +40,95 @@ Detected objects are **logged in a scrollable GUI text box**, making it easy for
 
 
 ## 📂 Folder Structure
+```bash
+YOLOv8-Object-Detection/
+│
+├── README.md                   # This file
+├── requirements.txt            # Project dependencies
+├── main.py                     # Full Python code
+├── images/                     # Test images
+│   └── sample.jpg
+├── videos/                     # Test videos
+    └── sample.mp4
+ 
+```
+## ⚙️ Installation
+
+**1.Clone the repository:**
+```bash
+git clone https://github.com/<username>/YOLOv8-Object-Detection.git
+cd YOLOv8-Object-Detection
+```
+
+**2.Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+**3.Run the project:**
+```bash
+python main.py
+```
+
+YOLOv8 will automatically download the model if not present locally.
+
+## 🎮 Usage
+## 🛠️ GUI Buttons
+Button	      Description
+🎥 Start  Webcam	Real-time detection from your default webcam.
+📷 Start  External Cam	Detection from an external camera.
+🖼️ Browse Image	Select an image file for detection.
+🎬 Browse System Video	Select a video file for detection.
+⏹️ Stop   Detection	Stop any running detection safely.
+
+- Detected objects appear in the GUI text box with counts.
+- Detection runs until stopped or OpenCV window is closed.
+
+## 🧩 How It Works
+
+**1.YOLOv8 Model**
+- Loads yolov8n.pt automatically to detect objects.
+- Detects multiple object types from the COCO dataset.
+**2.Video/Image Processing**
+  - OpenCV resizes and processes frames
+  - Annotated frames are displayed in real-time.
+
+**3.GUI Logging**
+- Tkinter GUI shows a scrollable text box listing detected objects.
+- Only new objects are logged to avoid duplicates.
+
+**4.Threading**
+- Video/image detection runs in a separate thread for smooth GUI Performance.
+
+## 🔮 Future Enhancements
+
+- Integrate DeepSORT for object tracking with unique IDs.
+
+- Save detection logs to CSV or database.
+
+- Mobile-friendly or web-based GUI.
+
+- Customizable detection thresholds and models.
+---
+## 📦 Requirements
+
+- Python 3.10+
+- OpenCV
+- Ultralytics YOLOv8
+- Imutils
+- Tkinter
+- NumPy
+
+**Install all dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+
+## 🙏 Acknowledgements
+
+- Ultralytics YOLOv8
+- OpenCV
+- Imutils
+- Tkinter
 
